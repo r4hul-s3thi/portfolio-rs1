@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rahul Sethi // Security Portfolio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <style>
+        :root {
+            --primary: #b062ff;
+            --primary-dark: #7a2dd8;
+            --bg-dark: #06070b;
+        }
+
+        body {
+            background: radial-gradient(circle at top, #0d0d14 0%, #06070b 60%);
+            color: #AEB3C2;
+            font-family: "Inter", sans-serif;
+            scroll-behavior: smooth;
+            overflow-x: hidden;
+        }
+
+        /* Animated Particles */
+        .particles {
+            position: fixed;
+            pointer-events: none;
+            z-index: -1;
+            width: 100%;
+            height: 100%;
+            background: url("https://i.imgur.com/6NKPrhO.png");
+            opacity: 0.08;
+            animation: drift 30s linear infinite;
+        }
+
+        @keyframes drift {
+            from { transform: translateY(0); }
+            to { transform: translateY(-2000px); }
+        }
+
+        /* Cyber grid */
+        .grid-bg {
+            background-image: linear-gradient(#1a1a25 1px, transparent 1px),
+                              linear-gradient(90deg, #1a1a25 1px, transparent 1px);
+            background-size: 45px 45px;
+            opacity: 0.2;
+            position: fixed;
+            inset: 0;
+            z-index: -2;
+        }
+
+        /* 3D Hover */
+        .card-3d {
+            background: rgba(20, 20, 30, 0.6);
+            backdrop-filter: blur(10px);
+            border: 1px solid #1e1e26;
+            transition: 0.4s;
+        }
+
+        .card-3d:hover {
+            transform: translateY(-8px) scale(1.02);
+            border-color: var(--primary);
+            box-shadow: 0 0 25px rgba(176, 98, 255, 0.2);
+        }
+
+        /* Section Header */
+        .section-header {
+            position: relative;
+            font-size: 1.7rem;
+            color: white;
+            margin-bottom: 2rem;
+            font-weight: 800;
+        }
+
+        .section-header::after {
+            content: "";
+            position: absolute;
+            left: 0;
+            bottom: -8px;
+            height: 2px;
+            width: 150px;
+            background: linear-gradient(90deg, var(--primary), transparent);
+        }
+
+        /* Fade */
+        .fade-section {
+            opacity: 0;
+            transform: translateY(40px);
+            transition: all 1s ease;
+        }
+
+        .fade-section.show {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Mouse Glow */
+        #glow {
+            position: fixed;
+            width: 240px;
+            height: 240px;
+            background: rgba(176, 98, 255, 0.15);
+            filter: blur(120px);
+            border-radius: 50%;
+            pointer-events: none;
+            z-index: 0;
+            transition: 0.15s linear;
+            transform: translate(-50%, -50%);
+        }
+
+        nav a:hover {
+            color: var(--primary);
+        }
+
+        a.link {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div id="glow"></div>
+    <div class="particles"></div>
+    <div class="grid-bg"></div>
+
+    <!-- NAV -->
+    <nav class="p-8 flex justify-between items-center max-w-7xl mx-auto">
+        <div class="font-bold text-white text-2xl tracking-tight">RAHUL<span class="text-purple-400">.</span></div>
+
+        <div class="hidden md:flex gap-10 text-xs font-mono uppercase tracking-widest">
+            <a href="#about">About</a>
+            <a href="#exp">Work</a>
+            <a href="#projects">Projects</a>
+            <a href="#skills">Skills</a>
+            <a href="#stats">Stats</a>
+            <a href="#ctf">CTF</a>
+            <a href="#writeups">Writeups</a>
+            <a href="#certs">Certifications</a>
+
+            <a href="mailto:rahulsethi30000@gmail.com" 
+               class="text-purple-400 border border-purple-600 px-4 py-1.5 rounded hover:bg-purple-400/10">
+               Contact
+            </a>
+        </div>
+    </nav>
+
+    <!-- ABOUT -->
+    <section id="about" class="min-h-[85vh] max-w-7xl mx-auto px-8 flex flex-col justify-center fade-section">
+        <p class="text-purple-400 font-mono mb-4">Hello, I'm</p>
+
+        <h1 class="text-6xl md:text-8xl font-black text-white mb-4">
+            Rahul Sethi<span class="text-purple-500">.</span>
+        </h1>
+
+        <h2 class="text-3xl md:text-5xl font-bold text-zinc-400 mb-8">
+            I break systems to <span class="text-white">secure them.</span>
+        </h2>
+
+        <p class="max-w-xl text-lg text-zinc-400">
+            Cybersecurity practitioner & ethical hacker. Specializing in offensive security,
+            OSINT, digital forensics, threat intelligence, and exploit research.
+        </p>
+    </section>
+
+    <!-- EXPERIENCE -->
+    <section id="exp" class="py-24 max-w-7xl mx-auto px-8 fade-section">
+        <h3 class="section-header">Experience</h3>
+
+        <div class="grid md:grid-cols-2 gap-6">
+            <div class="card-3d p-8 rounded-2xl">
+                <span class="text-xs text-purple-400 font-mono">2025 - Present</span>
+                <h4 class="text-xl text-white font-bold mt-2">Infosec Content Lead</h4>
+                <p class="text-sm text-zinc-500 mb-6">Cyber Security Club, CVRGU</p>
+
+                <ul class="space-y-3 text-sm">
+                    <li><span class="dot"></span> Leading 200+ members in cybersecurity awareness.</li>
+                    <li><span class="dot"></span> Producing OSINT, malware, and exploit writeups.</li>
+                </ul>
+            </div>
+
+            <div class="card-3d p-8 rounded-2xl">
+                <span class="text-xs text-purple-400 font-mono">2023 - Present</span>
+                <h4 class="text-xl text-white font-bold mt-2">Security Researcher</h4>
+                <p class="text-sm text-zinc-500 mb-6">Bug Bounty Programs</p>
+
+                <ul class="space-y-3 text-sm">
+                    <li><span class="dot"></span> Discovered SQLi, XSS, IDOR & auth bypass.</li>
+                    <li><span class="dot"></span> Featured in multiple Hall of Fame recognitions.</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- PROJECTS -->
+    <section id="projects" class="py-24 max-w-7xl mx-auto px-8 fade-section">
+        <h3 class="section-header">Projects</h3>
+
+        <div class="grid md:grid-cols-2 gap-8">
+
+            <div class="card-3d p-8 rounded-xl">
+                <h4 class="text-xl text-white mb-2">Girl Safety AI</h4>
+                <p class="text-zinc-400 text-sm">Real-time anomaly detection using CCTV feeds.</p>
+            </div>
+
+            <div class="card-3d p-8 rounded-xl">
+                <h4 class="text-xl text-white mb-2">GreyMatter AI</h4>
+                <p class="text-zinc-400 text-sm">Deep-learning based detection toolkit.</p>
+            </div>
+
+            <div class="card-3d p-8 rounded-xl">
+                <h4 class="text-xl text-white mb-2">Threat Recon Scanner</h4>
+                <p class="text-zinc-400 text-sm">OSINT Mapping + Recon Automation.</p>
+            </div>
+
+            <div class="card-3d p-8 rounded-xl">
+                <h4 class="text-xl text-white mb-2">Auto Web Pentester</h4>
+                <p class="text-zinc-400 text-sm">Detects SQLi, XSS, CSRF, IDOR automatically.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- UNDER DEVELOPMENT PROJECTS -->
+    <section id="ongoing-projects" class="py-24 max-w-7xl mx-auto px-8 fade-section">
+        <h3 class="section-header">Under Development</h3>
+
+        <ul class="space-y-4 text-lg text-purple-300">
+            <li>
+                • <a href="https://www.linkedin.com/posts/rahul-sethi-044411249_cybersecurity-sim0n-bugbounty-activity-7335770505783762945-Fmve"
+                     target="_blank" class="link hover:text-white">
+                     Cybersecurity Sim0n BugBounty — Research Project
+                </a>
+            </li>
+        </ul>
+    </section>
+
+    <!-- SKILLS -->
+    <section id="skills" class="py-24 max-w-7xl mx-auto px-8 fade-section">
+        <h3 class="section-header">Technical Toolkit</h3>
+
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-4 text-sm">
+            <div class="card-3d p-6 text-purple-300 font-mono rounded-lg"># Burp Suite</div>
+            <div class="card-3d p-6 text-purple-300 font-mono rounded-lg"># Metasploit</div>
+            <div class="card-3d p-6 text-purple-300 font-mono rounded-lg"># Kali Linux</div>
+            <div class="card-3d p-6 text-purple-300 font-mono rounded-lg"># Wireshark</div>
+            <div class="card-3d p-6 text-purple-300 font-mono rounded-lg"># Python Automation</div>
+            <div class="card-3d p-6 text-purple-300 font-mono rounded-lg"># OSINT Tools</div>
+            <div class="card-3d p-6 text-purple-300 font-mono rounded-lg"># SQL Injection</div>
+            <div class="card-3d p-6 text-purple-300 font-mono rounded-lg"># XSS Exploitation</div>
+        </div>
+    </section>
+
+    <!-- STATS -->
+    <section id="stats" class="py-24 max-w-7xl mx-auto px-8 fade-section">
+        <h3 class="section-header">Stats & Impact</h3>
+
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
+
+            <div class="card-3d p-8 rounded-xl">
+                <h4 class="text-4xl text-purple-400 font-bold">50+</h4>
+                <p class="text-zinc-400">Vulnerabilities Found</p>
+            </div>
+
+            <div class="card-3d p-8 rounded-xl">
+                <h4 class="text-4xl text-purple-400 font-bold">200+</h4>
+                <p class="text-zinc-400">Students Mentored</p>
+            </div>
+
+            <div class="card-3d p-8 rounded-xl">
+                <h4 class="text-4xl text-purple-400 font-bold">20+</h4>
+                <p class="text-zinc-400">Writeups Published</p>
+            </div>
+
+            <div class="card-3d p-8 rounded-xl">
+                <h4 class="text-4xl text-purple-400 font-bold">10+</h4>
+                <p class="text-zinc-400">Hackathons</p>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- CTF + BUG BOUNTY -->
+    <section id="ctf" class="py-24 max-w-7xl mx-auto px-8 fade-section">
+        <h3 class="section-header">CTF & Bug Bounty</h3>
+
+        <ul class="space-y-4 text-lg text-zinc-400">
+            <li>• SQL Injection exploitation (live targets)</li>
+            <li>• XSS (stored + reflected) discoveries</li>
+            <li>• Authentication bypass PoCs</li>
+            <li>• OSINT investigations & deanonymization</li>
+        </ul>
+
+        <h4 class="text-2xl text-white font-bold mt-10">Featured Writeups</h4>
+        <ul class="space-y-3 text-lg text-purple-300">
+            <li>
+                • <a href="https://medium.com/@rahulsethi30000/hackcgu-2-0-ctf-challenge-writeup-part-1-5549ebab0f74" 
+                     target="_blank" class="link hover:text-white">
+                     HackCGU 2.0 — CTF Challenge Writeup (Part 1)
+                </a>
+            </li>
+        </ul>
+
+        <h4 class="text-2xl text-white font-bold mt-10">Bug Hunting Hall of Fame</h4>
+        <ul class="space-y-3 text-lg text-purple-300">
+            <li>
+                • <a href="https://www.linkedin.com/posts/rahul-sethi-044411249_halloffame-hack-bugbounty-activity-7336744520325222400-ecNy"
+                     target="_blank" class="link hover:text-white">
+                     LinkedIn — Bug Bounty Hall of Fame Recognition
+                </a>
+            </li>
+        </ul>
+    </section>
+
+    <!-- WRITEUPS -->
+    <section id="writeups" class="py-24 max-w-7xl mx-auto px-8 fade-section">
+        <h3 class="section-header">Research & Writeups</h3>
+
+        <ul class="space-y-4 text-lg text-zinc-400">
+            <li>• SQL Injection Deep Dive — Practical exploitation</li>
+            <li>• OSINT Techniques — Digital identity mapping</li>
+            <li>• Recon Automation — Web Intelligence scripts</li>
+        </ul>
+    </section>
+
+    <!-- CERTIFICATIONS -->
+    <section id="certs" class="py-24 max-w-7xl mx-auto px-8 fade-section">
+        <h3 class="section-header">Certifications</h3>
+
+        <ul class="space-y-3 text-lg text-zinc-300">
+            <li>• CEH — Certified Ethical Hacker(pending)</li>
+            <li>• Cyber Crime Investigation & Bug Bounty — ICC</li>
+            <li>• RSP Internship — Design department</li>
+            <li>• TryHackMe — Jr.Pentester</li>
+
+        </ul>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact" class="py-24 max-w-7xl mx-auto px-8 text-center fade-section">
+        <h3 class="text-4xl text-white font-bold mb-6">Let’s Connect</h3>
+
+        <p class="text-zinc-400 mb-10 text-lg">Open for cybersecurity roles, red teaming & internships.</p>
+
+        <a href="mailto:rahulsethi30000@gmail.com"
+           class="font-mono text-purple-400 border border-purple-600 px-10 py-4 rounded hover:bg-purple-500/10">
+            GET_IN_TOUCH
+        </a>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="py-10 text-center text-zinc-600 text-xs border-t border-zinc-900">
+        © 2025 Rahul Sethi — Cybersecurity Portfolio
+    </footer>
+
+    <!-- JS Animations -->
+    <script>
+        const glow = document.getElementById("glow");
+        document.addEventListener("mousemove", e => {
+            glow.style.left = e.clientX + "px";
+            glow.style.top = e.clientY + "px";
+        });
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(e => {
+                if (e.isIntersecting) e.target.classList.add("show");
+            });
+        }, { threshold: 0.2 });
+
+        document.querySelectorAll(".fade-section").forEach(sec => observer.observe(sec));
+    </script>
+
+</body>
+</html>
