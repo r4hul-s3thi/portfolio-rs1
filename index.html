@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Rahul Sethi — Portfolio</title>
+  <link rel="stylesheet" href="style.css"/>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;900&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+</head>
+<body>
+
+  <!-- Custom Cursor -->
+  <div class="cursor"></div>
+  <div class="cursor-follower"></div>
+
+  <!-- Noise Overlay -->
+  <div class="noise"></div>
+
+  <!-- Nav -->
+  <nav class="nav">
+    <div class="nav-logo">RS</div>
+    <ul class="nav-links">
+      <li><a href="#about">About</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- Hero -->
+  <section class="hero" id="home">
+    <div class="hero-bg">
+      <div class="blob blob-1"></div>
+      <div class="blob blob-2"></div>
+      <div class="blob blob-3"></div>
+    </div>
+    <div class="hero-content">
+      <p class="hero-greeting reveal-up">Hello, I'm</p>
+      <h1 class="hero-name reveal-up">Rahul<br/><span>Sethi</span></h1>
+      <p class="hero-role reveal-up">I'm a <span class="typed"></span></p>
+      <div class="hero-cta reveal-up">
+        <a href="#projects" class="btn btn-primary">View Work</a>
+        <a href="#contact" class="btn btn-outline">Get in Touch</a>
+      </div>
+      <div class="hero-socials reveal-up">
+        <a href="https://github.com/r4hul-s3thi" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
+        <a href="https://www.linkedin.com/in/rahul-sethi-044411249" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+        <a href="https://medium.com/@rahulsethi30000" target="_blank" aria-label="Medium"><i class="fab fa-medium"></i></a>
+      </div>
+    </div>
+    <div class="scroll-indicator">
+      <span></span>
+    </div>
+  </section>
+
+  <!-- About -->
+  <section class="section about" id="about">
+    <div class="container">
+      <h2 class="section-title reveal-up">About <span>Me</span></h2>
+      <div class="about-grid">
+        <div class="about-avatar reveal-left">
+          <div class="avatar-ring">
+            <div class="avatar-inner">RS</div>
+          </div>
+          <div class="avatar-badge">Open to Work</div>
+        </div>
+        <div class="about-text reveal-right">
+          <p>I'm a passionate developer who loves building clean, performant, and user-centric digital experiences. I write about tech on Medium and share my code on GitHub.</p>
+          <p>When I'm not coding, I'm exploring new technologies, contributing to open source, and writing articles to share knowledge with the community.</p>
+          <div class="about-stats">
+            <div class="stat">
+              <span class="stat-num" data-target="10">0</span><span>+</span>
+              <p>Projects</p>
+            </div>
+            <div class="stat">
+              <span class="stat-num" data-target="5">0</span><span>+</span>
+              <p>Articles</p>
+            </div>
+            <div class="stat">
+              <span class="stat-num" data-target="3">0</span><span>+</span>
+              <p>Years Exp.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Skills -->
+  <section class="section skills" id="skills">
+    <div class="container">
+      <h2 class="section-title reveal-up">My <span>Skills</span></h2>
+      <div class="skills-grid">
+        <div class="skill-card reveal-up" style="--d:0s">
+          <i class="fab fa-python"></i>
+          <span>Python</span>
+        </div>
+        <div class="skill-card reveal-up" style="--d:.1s">
+          <i class="fab fa-js"></i>
+          <span>JavaScript</span>
+        </div>
+        <div class="skill-card reveal-up" style="--d:.2s">
+          <i class="fab fa-react"></i>
+          <span>React</span>
+        </div>
+        <div class="skill-card reveal-up" style="--d:.3s">
+          <i class="fab fa-node-js"></i>
+          <span>Node.js</span>
+        </div>
+        <div class="skill-card reveal-up" style="--d:.4s">
+          <i class="fab fa-html5"></i>
+          <span>HTML5</span>
+        </div>
+        <div class="skill-card reveal-up" style="--d:.5s">
+          <i class="fab fa-css3-alt"></i>
+          <span>CSS3</span>
+        </div>
+        <div class="skill-card reveal-up" style="--d:.6s">
+          <i class="fab fa-git-alt"></i>
+          <span>Git</span>
+        </div>
+        <div class="skill-card reveal-up" style="--d:.7s">
+          <i class="fas fa-database"></i>
+          <span>SQL</span>
+        </div>
+        <div class="skill-card reveal-up" style="--d:.8s">
+          <i class="fab fa-docker"></i>
+          <span>Docker</span>
+        </div>
+        <div class="skill-card reveal-up" style="--d:.9s">
+          <i class="fas fa-brain"></i>
+          <span>ML / AI</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Projects -->
+  <section class="section projects" id="projects">
+    <div class="container">
+      <h2 class="section-title reveal-up">Featured <span>Projects</span></h2>
+      <div class="projects-grid">
+
+        <div class="project-card reveal-up" style="--d:0s">
+          <div class="project-top">
+            <i class="fas fa-folder-open"></i>
+            <div class="project-links">
+              <a href="https://github.com/r4hul-s3thi" target="_blank"><i class="fab fa-github"></i></a>
+            </div>
+          </div>
+          <h3>Project Alpha</h3>
+          <p>A full-stack web application built with React and Node.js featuring real-time data updates and a clean UI.</p>
+          <div class="project-tags">
+            <span>React</span><span>Node.js</span><span>MongoDB</span>
+          </div>
+        </div>
+
+        <div class="project-card reveal-up" style="--d:.15s">
+          <div class="project-top">
+            <i class="fas fa-folder-open"></i>
+            <div class="project-links">
+              <a href="https://github.com/r4hul-s3thi" target="_blank"><i class="fab fa-github"></i></a>
+            </div>
+          </div>
+          <h3>ML Pipeline</h3>
+          <p>An end-to-end machine learning pipeline for data preprocessing, model training, and deployment using Python.</p>
+          <div class="project-tags">
+            <span>Python</span><span>Scikit-learn</span><span>Docker</span>
+          </div>
+        </div>
+
+        <div class="project-card reveal-up" style="--d:.3s">
+          <div class="project-top">
+            <i class="fas fa-folder-open"></i>
+            <div class="project-links">
+              <a href="https://github.com/r4hul-s3thi" target="_blank"><i class="fab fa-github"></i></a>
+            </div>
+          </div>
+          <h3>API Gateway</h3>
+          <p>A scalable REST API gateway with authentication, rate limiting, and comprehensive logging built with Node.js.</p>
+          <div class="project-tags">
+            <span>Node.js</span><span>Express</span><span>Redis</span>
+          </div>
+        </div>
+
+        <div class="project-card reveal-up" style="--d:.45s">
+          <div class="project-top">
+            <i class="fas fa-folder-open"></i>
+            <div class="project-links">
+              <a href="https://github.com/r4hul-s3thi" target="_blank"><i class="fab fa-github"></i></a>
+            </div>
+          </div>
+          <h3>Data Dashboard</h3>
+          <p>Interactive analytics dashboard with real-time charts, filters, and export functionality for business insights.</p>
+          <div class="project-tags">
+            <span>React</span><span>D3.js</span><span>SQL</span>
+          </div>
+        </div>
+
+        <div class="project-card reveal-up" style="--d:.6s">
+          <div class="project-top">
+            <i class="fas fa-folder-open"></i>
+            <div class="project-links">
+              <a href="https://medium.com/@rahulsethi30000" target="_blank"><i class="fab fa-medium"></i></a>
+            </div>
+          </div>
+          <h3>Tech Articles</h3>
+          <p>Writing about software engineering, machine learning, and developer productivity on Medium for the community.</p>
+          <div class="project-tags">
+            <span>Writing</span><span>ML</span><span>Dev</span>
+          </div>
+        </div>
+
+        <div class="project-card reveal-up" style="--d:.75s">
+          <div class="project-top">
+            <i class="fas fa-folder-open"></i>
+            <div class="project-links">
+              <a href="https://github.com/r4hul-s3thi" target="_blank"><i class="fab fa-github"></i></a>
+            </div>
+          </div>
+          <h3>CLI Toolkit</h3>
+          <p>A developer productivity CLI toolkit with automation scripts, code generators, and workflow helpers.</p>
+          <div class="project-tags">
+            <span>Python</span><span>Shell</span><span>CLI</span>
+          </div>
+        </div>
+
+      </div>
+      <div class="projects-more reveal-up">
+        <a href="https://github.com/r4hul-s3thi" target="_blank" class="btn btn-outline">View All on GitHub <i class="fab fa-github"></i></a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Writing -->
+  <section class="section writing" id="writing">
+    <div class="container">
+      <h2 class="section-title reveal-up">Latest <span>Writing</span></h2>
+      <div class="writing-grid">
+        <a href="https://medium.com/@rahulsethi30000" target="_blank" class="writing-card reveal-up" style="--d:0s">
+          <span class="writing-tag">Tech</span>
+          <h3>Exploring the Future of AI in Software Development</h3>
+          <p>How AI tools are reshaping the way developers write, test, and ship code.</p>
+          <span class="writing-read">Read on Medium <i class="fas fa-arrow-right"></i></span>
+        </a>
+        <a href="https://medium.com/@rahulsethi30000" target="_blank" class="writing-card reveal-up" style="--d:.2s">
+          <span class="writing-tag">Tutorial</span>
+          <h3>Building Scalable APIs with Node.js and Express</h3>
+          <p>A step-by-step guide to designing and deploying production-ready REST APIs.</p>
+          <span class="writing-read">Read on Medium <i class="fas fa-arrow-right"></i></span>
+        </a>
+        <a href="https://medium.com/@rahulsethi30000" target="_blank" class="writing-card reveal-up" style="--d:.4s">
+          <span class="writing-tag">ML</span>
+          <h3>Getting Started with Machine Learning in Python</h3>
+          <p>A beginner-friendly walkthrough of ML concepts with practical Python examples.</p>
+          <span class="writing-read">Read on Medium <i class="fas fa-arrow-right"></i></span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section class="section contact" id="contact">
+    <div class="container">
+      <h2 class="section-title reveal-up">Get In <span>Touch</span></h2>
+      <p class="contact-sub reveal-up">Have a project in mind or just want to say hi? My inbox is always open.</p>
+      <div class="contact-grid">
+        <div class="contact-links reveal-left">
+          <a href="https://github.com/r4hul-s3thi" target="_blank" class="contact-link">
+            <i class="fab fa-github"></i>
+            <div>
+              <span>GitHub</span>
+              <p>r4hul-s3thi</p>
+            </div>
+          </a>
+          <a href="https://www.linkedin.com/in/rahul-sethi-044411249" target="_blank" class="contact-link">
+            <i class="fab fa-linkedin-in"></i>
+            <div>
+              <span>LinkedIn</span>
+              <p>rahul-sethi-044411249</p>
+            </div>
+          </a>
+          <a href="https://medium.com/@rahulsethi30000" target="_blank" class="contact-link">
+            <i class="fab fa-medium"></i>
+            <div>
+              <span>Medium</span>
+              <p>@rahulsethi30000</p>
+            </div>
+          </a>
+        </div>
+        <form class="contact-form reveal-right" id="contactForm">
+          <div class="form-group">
+            <input type="text" placeholder="Your Name" required/>
+          </div>
+          <div class="form-group">
+            <input type="email" placeholder="Your Email" required/>
+          </div>
+          <div class="form-group">
+            <textarea rows="5" placeholder="Your Message" required></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary">Send Message <i class="fas fa-paper-plane"></i></button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <p>Designed & Built by <span>Rahul Sethi</span> · 2025</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
